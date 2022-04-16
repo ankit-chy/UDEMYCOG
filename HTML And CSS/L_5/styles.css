@@ -1,0 +1,23 @@
+body{
+    font-family:Helvetica;
+    background-color: rgba(86, 94, 94, 0.63);
+    color:rgb(238, 15, 15)
+}
+
+h1{
+    font-size:35px;
+    margin: 0;
+}
+
+p{
+    font-style:italic;
+}
+
+h2{
+    color:rgba(28, 4, 133, 0.849);
+    border-top:solid 1px #555;
+}
+
+ol{
+   border-bottom: solid 2px #333;  
+}
