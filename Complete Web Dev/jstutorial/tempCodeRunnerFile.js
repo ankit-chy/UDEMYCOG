@@ -1,1 +1,1 @@
-const prompt=require("prompt-sync")();
+ // console.log("Love Percentage  😍😍"+n+"%");
