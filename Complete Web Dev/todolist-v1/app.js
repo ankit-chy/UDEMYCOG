@@ -5,18 +5,24 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.get("/", function(req, res){
+app.use("view engine", "ejs");
 
-var today = new Date();
-var currentDay = today.getDate();
+app.get("/", function (req, res) {
 
-if(currentDay == 0 || currentDay == 6){
-  res.write("<h1>Yay! it's Weekend!</h1>");
-} else {
-    res.sendFile(__dirname + "/index.html");  
-}
+  var today = new Date();
+  var currentDay = today.getDate();
+  var day = "";
+
+  if (currentDay == 0 || currentDay == 6) {
+    day = "Weekend";
+  } else {
+    day = "Weekday";
+  }
+  res.render("list", {kindOfDay: day});
+
 });
 
-app.listen(3000, function(){
+
+app.listen(3000, function () {
   console.log("Server started on port 3000.");
-});
+})
