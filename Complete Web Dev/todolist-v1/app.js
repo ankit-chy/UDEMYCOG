@@ -15,9 +15,12 @@ app.get("/", function (req, res) {
 
   if (currentDay == 0 || currentDay == 6) {
     day = "Weekend";
+    res.render("list", {kindOfDay: day});
   } else {
     day = "Weekday";
-  res.render("list", {kindOfDay: day});
+    res.render("list", {kindOfDay: day});
+  }
+ 
 
 });
 
